@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LHSceneEditViewController">
+            <connections>
+                <outlet property="btnChange" destination="x1i-wp-XAS" id="oIE-yK-r9K"/>
+                <outlet property="collectionView" destination="mNY-0t-PCw" id="CFO-Rr-2y4"/>
+                <outlet property="iconScene" destination="Lpk-A6-JV2" id="0oc-vb-xNu"/>
+                <outlet property="iconTapView" destination="vmW-E3-ZpU" id="Mzc-Uv-vch"/>
+                <outlet property="tfScene" destination="O6v-Xt-4vR" id="sl4-XJ-dGZ"/>
+                <outlet property="topMargin" destination="khT-Gr-9ei" id="6pH-bY-KVx"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Lac-tO-lyI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBN-5v-Xb0" userLabel="sceneEditView">
+                    <rect key="frame" x="0.0" y="64" width="375" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="情景模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f19-Zs-dkd">
+                            <rect key="frame" x="75" y="24.5" width="69.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6v-Xt-4vR">
+                            <rect key="frame" x="159.5" y="26.5" width="120.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1i-wp-XAS">
+                            <rect key="frame" x="295" y="20" width="60" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="VUb-xu-ohk"/>
+                                <constraint firstAttribute="height" constant="30" id="vXO-bk-aqr"/>
+                            </constraints>
+                            <state key="normal" title="修改"/>
+                            <connections>
+                                <action selector="handleBtnChange:" destination="-1" eventType="touchUpInside" id="zwH-yc-fqy"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmW-E3-ZpU" userLabel="iconView" customClass="DDTapView">
+                            <rect key="frame" x="15" y="12.5" width="45" height="45"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_scene_default" translatesAutoresizingMaskIntoConstraints="NO" id="Lpk-A6-JV2">
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="FAF-lE-LuE"/>
+                                <constraint firstItem="Lpk-A6-JV2" firstAttribute="leading" secondItem="vmW-E3-ZpU" secondAttribute="leading" id="IrS-MM-47b"/>
+                                <constraint firstAttribute="bottom" secondItem="Lpk-A6-JV2" secondAttribute="bottom" id="YL0-Da-Ned"/>
+                                <constraint firstItem="Lpk-A6-JV2" firstAttribute="top" secondItem="vmW-E3-ZpU" secondAttribute="top" id="fPW-2u-gIU"/>
+                                <constraint firstAttribute="width" constant="45" id="kdn-iG-6c5"/>
+                                <constraint firstAttribute="trailing" secondItem="Lpk-A6-JV2" secondAttribute="trailing" id="oub-Og-dUQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="f19-Zs-dkd" firstAttribute="leading" secondItem="vmW-E3-ZpU" secondAttribute="trailing" constant="15" id="D7B-L0-J7x"/>
+                        <constraint firstItem="f19-Zs-dkd" firstAttribute="centerY" secondItem="hBN-5v-Xb0" secondAttribute="centerY" id="Hz0-xR-p2I"/>
+                        <constraint firstItem="O6v-Xt-4vR" firstAttribute="centerY" secondItem="hBN-5v-Xb0" secondAttribute="centerY" id="KVs-BG-tOT"/>
+                        <constraint firstItem="vmW-E3-ZpU" firstAttribute="centerY" secondItem="hBN-5v-Xb0" secondAttribute="centerY" id="Lib-f1-g0P"/>
+                        <constraint firstAttribute="trailing" secondItem="x1i-wp-XAS" secondAttribute="trailing" constant="20" id="QUA-LY-8xw"/>
+                        <constraint firstItem="O6v-Xt-4vR" firstAttribute="leading" secondItem="f19-Zs-dkd" secondAttribute="trailing" constant="15" id="TmI-8K-WXX"/>
+                        <constraint firstItem="x1i-wp-XAS" firstAttribute="centerY" secondItem="hBN-5v-Xb0" secondAttribute="centerY" id="Ule-j4-27K"/>
+                        <constraint firstAttribute="height" constant="70" id="aqA-jb-9eB"/>
+                        <constraint firstItem="x1i-wp-XAS" firstAttribute="leading" secondItem="O6v-Xt-4vR" secondAttribute="trailing" constant="15" id="cyp-4m-pfu"/>
+                        <constraint firstItem="vmW-E3-ZpU" firstAttribute="leading" secondItem="hBN-5v-Xb0" secondAttribute="leading" constant="15" id="hNC-Ti-ibs"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mNY-0t-PCw">
+                    <rect key="frame" x="0.0" y="142" width="375" height="525"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wcy-YF-t3c">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mNY-0t-PCw" secondAttribute="trailing" id="41V-wx-ksl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mNY-0t-PCw" secondAttribute="bottom" id="84N-VB-rr5"/>
+                <constraint firstItem="mNY-0t-PCw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QtH-Pd-gC8"/>
+                <constraint firstItem="hBN-5v-Xb0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YNB-nY-ST4"/>
+                <constraint firstItem="hBN-5v-Xb0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="64" id="khT-Gr-9ei"/>
+                <constraint firstItem="hBN-5v-Xb0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="meq-Uj-KoL"/>
+                <constraint firstItem="mNY-0t-PCw" firstAttribute="top" secondItem="hBN-5v-Xb0" secondAttribute="bottom" constant="8" symbolic="YES" id="naI-1p-P5f"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132" y="145.27736131934034"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_scene_default" width="150" height="150"/>
+    </resources>
+</document>

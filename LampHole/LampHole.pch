@@ -1,0 +1,66 @@
+//
+//  LampHole.pch
+//  LampHole
+//
+//  Created by dingdong on 2019/12/21.
+//  Copyright © 2019 dingdong. All rights reserved.
+//
+
+#ifndef LampHole_pch
+#define LampHole_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma mark - ......::::::: objc framework :::::::......
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+
+#pragma mark - ......::::::: podfile framework :::::::......
+//#import <UMAnalytics/MobClick.h>
+#import <MJRefresh/MJRefresh.h>
+#import <Masonry/Masonry.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <MJExtension/MJExtension.h>
+//#import <FLAnimatedImage.h>
+#import <SDWebImage.h>
+#import <YYKit.h>
+//#import <FBKVOController.h>
+//#import <NSObject+FBKVOController.h>
+#import <Bugly/Bugly.h>
+//#import <pop/POP.h>
+#pragma mark - ......::::::: 全局Block :::::::......
+/** 空Block */
+typedef void(^DDNoParamsBlock)(void);
+typedef void(^DDOneParamsBlock)(NSString *param);
+
+#pragma mark - ......::::::: 全局h文件导入 :::::::......
+///** Base基类 */
+#import "BaseHeader.h"
+///** 事件上报  */
+//#import "DDAnalyticHeader.h"
+/** 常量 */
+#import "DDCommonHeader.h"
+///** 分类 */
+#import "ExtensionHeader.h"
+///** 模型 */
+#import "DDModelsHeader.h"
+///** Manager管理类  */
+#import "DDManagerHeader.h"
+/** 工具类 */
+#import "DDUtilsHeader.h"
+///** 网络 */
+#import "DDNetworksHeader.h"
+///** 数据库 */
+#import "DDDBManagerHeader.h"
+/** 自定义view */
+#import "DDViewHeader.h"
+///** app delegate头文件 */
+//#import "AppDelegateHeader.h"
+#import "AppDelegate+Window.h"
+/** 数据共享类  */
+#import "DDShareCommonHelper.h"
+//#import "RequestParamsList.h"
+
+#endif /* LampHole_pch */
